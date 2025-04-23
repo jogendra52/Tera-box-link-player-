@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Link Player</title>
+</head>
+<body>
+  <h1>Paste Your Terabox Video Link Below:</h1>
+  <input type="text" id="linkInput" placeholder="Enter Terabox video link" style="width:80%; padding:8px;">
+  <br><br>
+  <button onclick="playVideo()" style="padding:8px 16px;">Play Video</button>
+
+  <br><br>
+  <video id="videoPlayer" controls style="width:90%; max-width:600px;"></video>
+
+  <script>
+    function playVideo() {
+      const link = document.getElementById('linkInput').value;
+      const player = document.getElementById('videoPlayer');
+      player.src = link;
+    }
+  </script>
+</body>
+</html>
